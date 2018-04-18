@@ -20,4 +20,14 @@ class Food(models.Model):
 		return self.name
 
 
+class Namess(models.Model):
+	namee=models.CharField(max_length=87)
+	nickname=models.CharField(max_length=87)
+	birthdayy=models.DecimalField(max_digits=7,decimal_places=0)
+	constellation=models.CharField(max_length=87)
+
+	def __str__(self):
+		return self.namee
+
+
 		

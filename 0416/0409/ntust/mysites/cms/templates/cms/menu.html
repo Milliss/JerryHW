@@ -1,3 +1,59 @@
+<h1><em>個人網頁哦</em></h1>
+<marquee behavior=alternate bgcolor=00ff00><font size="5">Jerryㄉ網頁課</font></marquee>
+<a herf="https://www.facebook.com/photo.php?fbid=699536440151055&set=a.107442739360431.8827.100002841173283&type=3&theater"><img src="https://scontent.ftpe6-1.fna.fbcdn.net/v/t1.0-9/11742858_699536440151055_1876317279505411847_n.jpg?oh=9a1888749972d407c90fef6045ce8e2d&oe=5ADB0F81" width="800" height="600"></a>
+{% for s in myname %}
+<h2>{{s.namee}}</h2>
+<h2>{{s.nickname}}</h2>
+<h2>{{s.birthdayy}}</h2>
+<h2>{{s.constellation}}</h2>
+	{% endfor %}
+
+<h2>安安你好</h2>
+
+<h2>我是米粒哦</h2>
+
+<article>  
+<hgroup>  
+    <h1><font color="ff0000">這裡是簡單的自我介紹哦</font></h1>
+    <h2>後面有無獎徵答哦,要注意看</h2> 
+</hgroup>  
+<p>  </p>
+<p>首先我喜歡的音樂是日本歌~</p>  
+<section>  
+    <h1><font color="0000ff">喜歡看玩的遊戲是RPG類型的!</font></h1> 
+    <p>也很喜歡睡覺哦</p> 
+</section>  
+<section>  
+    <h1><font color="00ff00">喜歡吃的食物是拉麵!</font></h1> 
+    <p>還有炸雞,披薩哦,順帶一提,鬼金棒真的很好吃</p> 
+</section>  
+</article>
+<p>  </p>
+<p>  </p>
+<p>  </p>
+<h3>還有話想對我說嗎><,可以在下面說哦</h3>
+
+<form>
+<textarea>我是文字輸入方塊</textarea>
+</form>
+
+<form> 剛剛說我喜歡什麼音樂還記得嗎？ :
+<select>
+<option>日本的
+<option>韓國的
+<option>台灣的
+<option>中國的
+<option>美國的
+<option>印度的 
+<option>隨便啦
+</select>
+</form>
+
+<p><input type=button value="按下去什麼也不會發生哦"></p>
+
+<h1>-----------------------我是分隔線------------------------</h1>
+
+
 <h1>美食菜單</h1>
 {% for r in restaurants %}
 <h2>{{r.name}}</h2>
