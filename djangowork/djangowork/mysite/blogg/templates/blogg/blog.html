@@ -1,0 +1,14 @@
+<h1><em>部落格哦</em></h1>
+<marquee behavior=alternate bgcolor=81c7d4><font color="微軟正黑體"><font size="5">Jerryㄉ網頁課</font></font></marquee>
+<h1><font color="微軟正黑體">部落格要寫什麼呀?</font></h1>>
+
+<h1><font color="微軟正黑體">那就再來自我介紹一下哦</font></h1>>
+
+{% for j in myname %}
+<h2><font color="微軟正黑體">我的名字：{{j.namee}}</font></h2>
+<h2><font color="微軟正黑體">我的綽號：{{j.nickname}}</font></h2>
+<h2><font color="微軟正黑體">我的性別：{{j.sexs}}</font></h2>
+<h2><font color="微軟正黑體">我的學號：{{j.stunumber}}</font></h2>
+<h2><font color="微軟正黑體">我的生日：{{j.birthdayy}}</font></h2>
+<h2><font color="微軟正黑體">我的星座：{{j.constellation}}</font></h2>
+	{% endfor %}
