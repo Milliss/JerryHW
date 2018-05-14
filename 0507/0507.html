@@ -10,6 +10,67 @@
     padding: 40px;
     text-align: center;
 } 
+a:link {
+    color: red;
+}
+
+/* visited link */
+a:visited {
+    color: green;
+}
+
+/* mouse over link */
+a:hover {
+    color: hotpink;
+}
+
+/* selected link */
+a:active {
+    color: blue;
+}
+p {
+    display: none;
+    background-color: yellow;
+    padding: 20px;
+}
+
+div:hover p {
+    display: block;
+}
+div:hover p {
+    display: block;
+}
+div.fixed {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    border: 3px solid #73AD21;
+}
+div.relative {
+    position: relative;
+    width: 400px;
+    height: 200px;
+    border: 3px solid #73AD21;
+} 
+
+div.absolute {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 200px;
+    height: 100px;
+    border: 3px solid #73AD21;
+}
+h1 {
+    color: db4d6d;
+    color="微軟正黑體";
+    margin-top: 70px;
+    margin-bottom: 70px;
+    margin-right: 80px;
+    margin-left: 80px;
+    border: 1px solid #4CAF50;
+}
 table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
@@ -22,8 +83,15 @@ th, td {
 </style>
 
 <h1>This is a heading</h1>
-<p>This is a paragraph.</p>
-
+<h1>This is a paragraph.</h1>
+<a href="https://www.google.com.tw/" target="_blank">This is a link</a>
+<p>安安</p>
+<div>移動過來看看阿
+  <p>笑死，這很好玩欸</p>
+</div>
+<div class="fixed">
+嗨你好,這是置頂喔ㄏㄏ;
+</div>
 <script>
 function light(sw) {
     var pic;
@@ -115,6 +183,9 @@ Last name:<br>
     <td>55577855</td>
   </tr>
 </table>
+<div class="relative">大方框可以包起小方框;
+  <div class="absolute">小方框會被大方框包起來</div>
+</div>
 <h2 style="text-align:center;"><p style="background-color:Tomato;"><font color="90b44b">綠字</font></p></h2>
 <form> 不要偷看哦 :
 <select>
