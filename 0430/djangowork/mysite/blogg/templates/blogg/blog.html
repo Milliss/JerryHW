@@ -18,4 +18,18 @@
 <h2><font color="微軟正黑體">問題：{{k.question_text}}</font></h2>
 <h2><font color="微軟正黑體">時間：{{k.pub_date}}</font></h2>
 	{% endfor %}
+<h2>----------我是分隔線哦哦哦-----------</h2>
+<div align="right"><a href="/blogg/new"><button>New Post</button></a></div><hr>
+	{% for post in post_list %}
+		<div align="right">
+			<a href="/blogg/edit?q={{ post.pk }}"><button>edit</button></a>
+			<form action="" method="post">
+				{% csrf_token %}
+				<input type="hidden" name="pk" value="{{ post.pk }}">
+				<input type="submit" value="delete">
+			</form>
+		</div>
+		<h4>Title:</h4>{{ post.title }}
+		<h4>Content:</h4>{{ post.content }}<hr>
+	{% endfor %}
 
