@@ -10,7 +10,8 @@ admin:
 
 信箱:cal456093@gmail.com
 
-https://git.heroku.com/secure-chamber-50572.git
+https://milliwebtry.herokuapp.com/motherday/
+https://milliwebtry.herokuapp.com/blogg/
 
 djangowork裡面的
 blogg=部落格

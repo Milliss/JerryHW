@@ -3,18 +3,118 @@
 <head>
   <link rel="stylesheet" href="styles.css">
 </head>
+<style>
+#myHeader {
+    background-color: lightblue;
+    color: black;
+    padding: 40px;
+    text-align: center;
+} 
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    background-color:#b5caa0;
+}
+th, td {
+    padding: 5px;
+    text-align: left;    
+}
+</style>
 
 <h1>This is a heading</h1>
 <p>This is a paragraph.</p>
-<body style="background-color:powderblue;"">
+
+<script>
+function light(sw) {
+    var pic;
+    if (sw == 0) {
+        pic = "Image_ea5c96d.jpg"
+    } else {
+        pic = "Image_6b2405d.jpg"
+    }
+    document.getElementById('myImage').src = pic;
+}
+</script>
+
+<img id="myImage" src="Image_ea5c96d.jpg" width="500" height="400">
+
+<p>
+<button type="button" onclick="light(1)">賣偶北共</button>
+<button type="button" onclick="light(0)">並沒有</button>
+</p>
+
+<h1 id="myHeader">My Header</h1>
+<body style="background-color:#fedfe1;>
 <h1 style="text-align:center;"><em><font color="fecfe1">0507測試哦</font></em></h1>
 <a  herf="file:///C:/Users/Shen/Documents/GitHub/JerryHW/0507/b.html"><input type=button value="看看b?"></a>
 <p><a href="https://www.google.com.tw/"><input type=button value="回去google阿?"></a></p>
-<img src="Image_ea5c96d.jpg" width="500" height="400" alt="並沒有">
-<img src="Image_5046e4a.jpg" width="500" height="400" alt="不要瞎掰好嗎?">
+
+<p><a href="https://www.youtube.com/watch?v=F1WfUymkJGo"><input type=button value="不要瞎掰好嗎?"></a></p>
+
+<p><a href="https://www.youtube.com/watch?v=F1WfUymkJGo"><img src="Image_ea5c96d.jpg" width="500" height="400" alt="並沒有"><img src="Image_5046e4a.jpg" width="500" height="400" alt="不要瞎掰好嗎?"></a></p>
+
 <h1 style="text-align:center;"><font color="b1b479">郭郭綠</font></h1>
-<img src="Image_6b2405d.jpg" width="500" height="400" alt="賣偶北共">
+
+<p><a href="https://www.youtube.com/watch?v=ZGl_rqA1U10"><img src="Image_6b2405d.jpg" width="500" height="400" alt="賣偶北共"></a></p>
+
 <h1 style="text-align:center;"><font color="6a4c9c">郭郭紫</font></h1>
+<h2>Text Input</h2>
+
+<form>
+First name:<br>
+<input type="text" name="firstname" value="Mickey">
+<br>
+Last name:<br>
+<input type="text" name="lastname" value="Mouse">
+<br><br>
+<input type="submit" value="Submit">
+<input type="reset">
+</form> 
+<form>
+<input type="checkbox" name="vehicle1" value="Bike">I have a bike
+<br>
+<input type="checkbox" name="vehicle2" value="Car">I have a car 
+<br><br>
+<input type="submit">
+</form>
+<table style="width:100%">
+  <tr>
+    <th>Name</th>
+    <th>Level</th> 
+    <th>Hp</th>
+    <th>Attack</th>
+  </tr>
+  <tr>
+    <td>Mille</td>
+    <td>82</td>
+    <td>30000</td>
+    <td>862</td>
+  </tr>
+  <tr>
+    <td>Milli</td>
+    <td>79</td>
+    <td>29800</td>
+    <td>779</td>
+  </tr>
+  <tr>
+    <td>John</td>
+    <td>85</td>
+    <td>38000</td>
+    <td>792</td>
+  </tr>
+</table>
+
+<table style="width:100%">
+  <tr>
+    <th>Name</th>
+    <th colspan="2">Telephone</th>
+  </tr>
+  <tr>
+    <td>Bill Gates</td>
+    <td>55577854</td>
+    <td>55577855</td>
+  </tr>
+</table>
 <h2 style="text-align:center;"><p style="background-color:Tomato;"><font color="90b44b">綠字</font></p></h2>
 <form> 不要偷看哦 :
 <select>
