@@ -1,9 +1,43 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="styles.css">
 </head>
 <style>
+* {
+    box-sizing: border-box;
+}
+
+/* Style the top navigation bar */
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* On screens that are 600px wide or less, make the menu links stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
 #myHeader {
     background-color: lightblue;
     color: black;
@@ -27,11 +61,6 @@ a:hover {
 /* selected link */
 a:active {
     color: blue;
-}
-p {
-    display: none;
-    background-color: yellow;
-    padding: 20px;
 }
 
 div:hover p {
@@ -71,6 +100,26 @@ h1 {
     margin-left: 80px;
     border: 1px solid #4CAF50;
 }
+h3{
+    color: db4d6d;
+    color="微軟正黑體";
+    margin-top: 70px;
+    margin-bottom: 70px;
+    margin-right: 500px;
+    margin-left: 500px;
+    border: 1px solid #4CAF50;
+    background-color:#b5caa0;
+}
+h4{
+    color: db4d6d;
+    color="微軟正黑體";
+    margin-top: 70px;
+    margin-bottom: 70px;
+    margin-right: 800px;
+    margin-left: 100px;
+    border: 1px solid #4CAF50;
+    background-color:#b5caa0;
+}
 table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
@@ -80,8 +129,51 @@ th, td {
     padding: 5px;
     text-align: left;    
 }
-</style>
+#container {  
+  display:flex;  
+  flex-direction:row;
+}
 
+/* row-reverse */
+#container2 {  
+  display:flex;  
+  flex-direction:row-reverse;
+}
+
+/* column */
+#container3 {  
+  display:flex;  
+  flex-direction:column;
+}
+
+/* column-reverse */
+#container4 {  
+  display:flex;  
+  flex-direction:column-reverse;
+}
+ul {
+  list-style-type: none;
+  border:1px solid #b5caa0; 
+  background-color:#d9cd90;
+}
+
+li {
+  flex-grow:1;
+  padding:5px;
+}
+</style>
+<ul id="container">
+   <li><a href="http://animista.net/play/basic/flip-scale">找動畫</a></li>
+   <li><a href="http://nipponcolors.com/#kurumi">找顏色</a></li>
+   <li><a href="https://www.google.com.tw/">google</a></li>
+   <li><a href="http://sweeteason.pixnet.net/blog/post/42781628-css-flexbox-layout-%E5%AD%B8%E7%BF%92%E5%BF%83%E5%BE%97">框架格子</a></li>
+   <li><a href="https://www.w3schools.com/css/">上課的內容</a></li>
+</ul>
+<div class="topnav">
+  <a href="https://www.google.com.tw/">Link</a>
+  <a href="https://www.google.com.tw/">Link</a>
+  <a href="https://www.google.com.tw/">Link</a>
+</div>
 <h1>This is a heading</h1>
 <h1>This is a paragraph.</h1>
 <a href="https://www.google.com.tw/" target="_blank">This is a link</a>
@@ -89,6 +181,10 @@ th, td {
 <div>移動過來看看阿
   <p>笑死，這很好玩欸</p>
 </div>
+<h3><a href="https://www.google.com.tw/">我是置中連結 會變色</a></h3>
+<h4><a href="https://www.google.com.tw/">我是測試</a></h4>
+<h3><a href="http://nipponcolors.com/#kurumi">找顏色點我</a></h3>
+
 <div class="fixed">
 嗨你好,這是置頂喔ㄏㄏ;
 </div>
