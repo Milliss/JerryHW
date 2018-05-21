@@ -2,38 +2,66 @@
 <head>
 </head>
 <body>
+<style>
+h1 {
+    color: #4CAF50;
+    color="微軟正黑體";
+    margin-top: 70px;
+    margin-bottom: 70px;
+    margin-right: 850px;
+    margin-left: 0px;
+    border: 1px solid #4CAF50;
+    background-color:#fedfe1;
+}
+</style>
+<h1>兩種喔 參考看看</h1>
+<h1>第一種 簡易版</h1>
+<SCRIPT> 
+function allclean(){ 
+document.getElementById( 'number1' ).value = ""
+document.getElementById( 'number2' ).value = ""
+document.getElementById( 'answer' ).value = ""
 
-<script>
-var x = myplus(4, 3);
-document.getElementById("demo").innerHTML = x;
+} 
 
-function myplus(a, b) {
-    return a + b;
+function myadd(){
+
+var x = parseInt(document.getElementById( 'number1' ).value)
+var y = parseInt(document.getElementById( 'number2' ).value)
+document.getElementById( 'answer' ).value = x + y
+
 }
-function myminus(a, b) {
-    return a - b;
+
+function mysub(){
+var x = document.getElementById( 'number1' ).value
+var y = document.getElementById( 'number2' ).value
+document.getElementById( 'answer' ).value= x - y 
+
 }
-function mymulti(a, b) {
-    return a * b;
+function mymulti(){
+var x = document.getElementById( 'number1' ).value
+var y = document.getElementById( 'number2' ).value
+document.getElementById( 'answer' ).value= x * y 
+
 }
-function mydiv(a, b) {
-    return a / b;
+function mydiv(){
+var x = document.getElementById( 'number1' ).value
+var y = document.getElementById( 'number2' ).value
+document.getElementById( 'answer' ).value= x / y 
+
 }
-</script>
-<form>
-number1:<br>
-<input type="text" name="number1" value="8">
+</SCRIPT> 
+A：<input type='number' name='number1' id='number1' style="text-align:center" /><br>
+B：<input type='number' name='number2' id='number2' style="text-align:center" /><br>
+<input type='button' name='submit' value='加' onclick="myadd()"/>
+<input type='button' name='submit' value='減' onclick="mysub()"/>
+<input type='button' name='submit' value='乘' onclick="mymulti()"/>
+<input type='button' name='submit' value='除' onclick="mydiv()"/>
+<input type='button' name='submit' value='清空' onclick="allclean();"/>
 <br>
-number2:<br>
-<input type="text" name="number2" value="7">
-<br><br>
-<input type="submit" value="myplus" onclick='processFormData();'>
-<input type="submit" value="myminus" onclick='processFormData();'>
-<input type="submit" value="mymulti" onclick='processFormData();'>
-<input type="submit" value="mydiv" onclick='processFormData();'>
-<input type="reset">
-</form> 
+The answer is：<input type='text' name='answer' id='answer' readonly>
 
+<h1>----第二種----</h1>
 <script>
     
     var temp=0;  //暫存被運算數
@@ -178,7 +206,21 @@ number2:<br>
         <td>    <input  type="button" value="/" onClick="operBtn('/')"> </td>
     </tr>
 </table>
----------------------------------------
+<h1>----這是第二題----</h1>
+<input id="score" value="60" />
 
+<button onclick="myFunction()">看看你有沒有及格的啦</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var score, answ;
+    score = document.getElementById("score").value;
+    answ = (score < 60) ? "不及格的啦":"非常好的啦";
+    document.getElementById("demo").innerHTML = answ;
+}
+</script>
+<h1>----END----</h1>
 </body>
 </html>
