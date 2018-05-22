@@ -23,6 +23,8 @@ class Migration(migrations.Migration):
                 ('googleconnect', models.CharField(max_length=87)),
                 ('suggest', models.CharField(max_length=878)),
                 ('score', models.CharField(max_length=12)),
+                ('telephone',models.DecimalField(max_digits=11,decimal_places=0)),
+                ('place',models.CharField(max_length=87)),
             ],
         ),
         migrations.CreateModel(

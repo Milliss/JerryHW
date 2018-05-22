@@ -5,7 +5,6 @@ from .models import *
 # Create your views here.
 def index(request):
 	mygraphh=graphh.objects.all()
-	ques=Question.objects.all()
 	return render_to_response('blog/blog.html',locals())
 
 def blog(request):
