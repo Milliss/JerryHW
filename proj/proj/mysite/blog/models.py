@@ -14,7 +14,9 @@ class graphh(models.Model):#graph功能
 
 class Post(models.Model):#回饋系統
     title = models.CharField(max_length=200)
+    score =models.DecimalField(max_digits=7,decimal_places=0)
     content = models.CharField(max_length=200)
+    pub_date=models.DateTimeField('date published')
     
     def __str__(self):
         return self.title

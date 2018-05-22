@@ -31,6 +31,8 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('title', models.CharField(max_length=200)),
                 ('content', models.CharField(max_length=200)),
+                ('score', models.DecimalField(max_digits=7,decimal_places=0)),
+                ('pub_date',models.DateTimeField('date published')),
             ],
         ),
     ]
