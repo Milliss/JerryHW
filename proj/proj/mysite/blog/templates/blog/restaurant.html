@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+ </div>
+
+  <!-- 地址 -->
+  {% for r in index %}
+  <div id="name">
+  <p>{{r.Name}}</p>
+  </div>
+  <div id="telephone">
+  100<br>{{r.Address}}<hr>
+  {{r.Telephone}}
+  {{r.googleconnect}}
+  {{% endfor %}}
+  </div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+    <head>
+        <title> Menu </title>
+        <meta charset='utf-8'>
+    </head>
+    <body>
+    <h1 class="text-center">菜單</h1>
+    <div class="container-fluid">
+    {% for r in restaurants %}
+    <h2>{{r.name}}</h2>
+    <h2>{{r.tele}}</h2>
+    <h2>{{r.address}}</h2>
+    <h2>{{r.googlecon}}</h2>
+    {% if r.picture_set.all %}
+    <p>一共有{{r.picture_set_all|length}}張照片</p>
+    {% for pi in r.picture_set.all %}
+    <h2>{{pi.name}}</h2>
+    <h2><img src='{{pi.pic}}'></h2>
+    {% endfor %}
+    {% else %}
+    <p>沒照片哦</p>
+    {% endif %}
+    {% endfor %}
+    </body>
+</html>

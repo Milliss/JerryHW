@@ -4,8 +4,9 @@ from django.template import loader
 from .models import *
 # Create your views here.
 def index(request):
-	mygraphh=graphh.objects.all()
-	return render_to_response('blog/blog.html',locals())
+	restaurants=restaurant.objects.all()
+	picture = picture.objects.filter(name=restaurant.name)
+	return render_to_response(request,'blog/restaurant.html',locals())
 
 def blog(request):
 	if request.method == 'POST':
