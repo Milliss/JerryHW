@@ -1,0 +1,34 @@
+{% load static %}
+<html>
+<style>
+body{
+	background:url("/static/restaurant/homepage/background.jpg");
+	width:1070px;
+	margin:15px auto;
+}
+</style>
+<head>
+	<title>晚餐吃什麼？</title>
+	<meta charset="utf-8">
+</head>
+<script>
+function hover(element) {element.setAttribute('src', "{% static 'restaurant/homepage/drawHover2.png' %}");}
+
+function unhover(element) {element.setAttribute('src', "{% static 'restaurant/homepage/draw.png' %}");}
+function hoverblock(element) {element.setAttribute('src', "{% static 'restaurant/homepage/block1Hover.png' %}");}
+
+function unhoverblock(element) {element.setAttribute('src', "{% static 'restaurant/homepage/block1.png' %}");}
+function hoverlogo(element) {element.setAttribute('src', "{% static 'restaurant/logoHover.png' %}");}
+
+function unhoverlogo(element) {element.setAttribute('src', "{% static 'restaurant/logo.png' %}");}
+</script>
+<body>
+		<a href="" id="logo"><img onmouseover="hoverlogo(this);" onmouseout="unhoverlogo(this);" src="{% static 'restaurant/logo.png' %}" border="0" height="72px" style="position:absolute;left:15px;z-index:3;"></a>
+		<span style="color:white;font-family:Microsoft JhengHei;position:absolute;left:100px;top:30px;">｜　公館篇</span>
+		
+		<img src="{% static 'restaurant/homepage/map.png' %}" style="position:absolute;top:0px;left:0px;">
+		<a href="../lottery" ><img id="draw" src="{% static 'restaurant/homepage/draw.png' %}" onmouseover="hover(this);" onmouseout="unhover(this);" style="position:absolute;z-index:2;top:180px;left:570px;"></a>
+		<a href="../categorize" id="block1"><img src="{% static 'restaurant/homepage/block1.png' %}" onmouseover="hoverblock(this);" onmouseout="unhoverblock(this);" style="position:absolute;z-index:1;top:50px;left:365px;"></a>
+
+</body>
+</html>

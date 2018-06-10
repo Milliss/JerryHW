@@ -1,0 +1,260 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+
+ <title>抽籤系統</title>
+
+ 
+ <link rel="stylesheet" type="text/css" href="css/normal.css" />
+ <link rel="stylesheet" type="text/css" href="css/icon.css" />
+ <link rel="stylesheet" type="text/css" href="css/style2.css" />
+ <link rel="stylesheet" type="text/css" href="css/rwdgrid.css" />
+</head>
+
+<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js'></script>
+ <script type="text/javascript">
+  $(function(){
+   $("#gotop").click(function(){
+    jQuery("html,body").animate({
+    scrollTop:0
+    },1000);
+   });
+   $(window).scroll(function() {
+    if ( $(this).scrollTop() > 300){
+     $('#gotop').fadeIn("fast");
+    } 
+    else {
+     $('#gotop').stop().fadeOut("fast");
+    }
+   });
+  });
+ </script>
+
+<script type="text/javascript">
+
+ function testResult() {
+
+    document.getElementById("mygif").src = "https://i.imgur.com/BQ8YFbq.gif";
+
+
+  var id2 = setInterval(rand2,3000);
+  function rand2(){
+
+   var num = Math.round(Math.random()*(23)+1);
+
+  var desc = Array(
+   document.getElementById("choice0").value,
+   document.getElementById("choice1").value, 
+   document.getElementById("choice2").value, 
+   document.getElementById("choice3").value, 
+   document.getElementById("choice4").value,
+   document.getElementById("choice5").value,
+   document.getElementById("choice6").value,
+   document.getElementById("choice7").value,
+   document.getElementById("choice8").value,
+   document.getElementById("choice9").value,
+   document.getElementById("choice10").value,
+   document.getElementById("choice11").value,
+   document.getElementById("choice12").value,
+   document.getElementById("choice13").value,
+   document.getElementById("choice14").value,
+   document.getElementById("choice15").value,
+   document.getElementById("choice16").value,
+   document.getElementById("choice17").value,
+   document.getElementById("choice18").value,
+   document.getElementById("choice19").value,
+   document.getElementById("choice20").value,
+   document.getElementById("choice21").value,
+   document.getElementById("choice22").value,
+   document.getElementById("choice23").value,);
+  //console.log(desc); return;
+  
+  
+  alert(desc[num]);
+  clearTimeout(id2);
+
+    if(num==0){
+    location.href = "../restaurant1"
+  }
+  else if(num == 1){
+    location.href = "../restaurant2"
+  }
+  else if(num == 2){
+    location.href = "../restaurant3"
+  }
+  else if(num == 3){
+    location.href = "../restaurant4"
+  }
+  else if(num == 4){
+    location.href = "../restaurant5"
+  }
+  else if(num == 5){
+    location.href = "../restaurant6"
+  }
+  else if(num == 6){
+    location.href = "../restaurant7"
+  }
+  else if(num == 7){
+    location.href = "../restaurant8"
+  }
+  else if(num == 8){
+    location.href = "../restaurant9"
+  }
+  else if(num == 9){
+    location.href = "../restaurant10"
+  }
+  else if(num == 10){
+    location.href = "../restaurant11"
+  }
+  else if(num == 11){
+    location.href = "../restaurant12"
+  }
+  else if(num == 12){
+    location.href = "../restaurant13"
+  }
+  else if(num == 13){
+    location.href = "../restaurant14"
+  }
+  else if(num == 14){
+    location.href = "../restaurant15"
+  }
+  else if(num == 15){
+    location.href = "../restaurant16"
+  }
+  else if(num == 16){
+    location.href = "../restaurant17"
+  }
+  else if(num == 17){
+    location.href = "../restaurant18"
+  }
+  else if(num == 18){
+    location.href = "../restaurant19"
+  }
+  else if(num == 19){
+    location.href = "../restaurant20"
+  }
+  else if(num == 20){
+    location.href = "../restaurant21"
+  }
+  else if(num == 21){
+    location.href = "../restaurant22"
+  }
+  else if(num == 22){
+    location.href = "../restaurant23"
+  }
+  else if(num == 23){
+    location.href = "../restaurant24"
+  }
+    else{
+    location.href = "../categorize"
+  }
+}
+  
+  }
+
+function hoverlogo(element) {element.setAttribute('src', "{% static 'restaurant/logoHover.png' %}");}
+
+function unhoverlogo(element) {element.setAttribute('src', "{% static 'restaurant/logo.png' %}");}
+</script>
+
+<style>
+
+  body{
+    background-image: url("https://i.imgur.com/PvVZPW5.jpg");
+    background-size: 1366px 768px;
+  }
+  #playyy {
+    display: block;
+    width:400px;
+    height:300px;
+    position:absolute;top:0px;left:120px;
+} 
+
+
+.button{
+
+  border:            none;
+  background:        none;
+  padding:           20px 120px;
+  background-image:  url(https://i.imgur.com/pbrKwVi.png);
+  background-repeat: no-repeat;
+  outline:           none;
+  position:absolute;top:340px;left:720px;
+}
+
+.button:hover {background-image: url(https://i.imgur.com/Hmr61o2.png)}
+.button:active {background-image: url(https://i.imgur.com/Hmr61o2.png)}
+
+
+</style>
+<body>
+
+<div class="header">
+ <div class="row">
+  <div class="container">
+   <a href="../homepage" id="logo"><img onmouseover="hoverlogo(this);" onmouseout="unhoverlogo(this);" src="{% static 'restaurant/logo.png' %}" border="0" height="72px" style="position:absolute;left:15px;z-index:3;"></a>
+    <span style="color:white;font-family:Microsoft JhengHei;position:absolute;left:100px;top:30px;">｜　公館篇</span>
+  </div>
+ </div>
+</div>
+
+
+<input type="hidden" id="choice0" value="1" />
+
+<!--中式-->
+    <input type = "hidden"  id="choice0" value="永和豆漿" />
+    <input type = "hidden"  id="choice1" value=" Mr. 雪腐" />
+    <input type = "hidden"  id="choice2" value="香鄉麵食館" />
+    <input type = "hidden"  id="choice3" value="桃源街石記麵館" />
+    <input type = "hidden"  id="choice4" value="丼咖哩" />
+
+
+<!--日式-->
+
+    <input type = "hidden"  id="choice15" value="萃茶風·大享食" />
+    <input type = "hidden"  id="choice16" value="Mr.拉麵" />
+    <input type = "hidden"  id="choice17" value="銀咖哩" />
+    <input type = "hidden"  id="choice18" value="赤神日式豬排" />
+    <input type = "hidden"  id="choice19" value="蔥丼" />
+
+<!--韓式-->
+
+    <input type = "hidden"  id="choice20" value="梅江韓國烤肉" />
+    <input type = "hidden"  id="choice21" value="首爾之家" />
+    <input type = "hidden"  id="choice22" value="劉震川日韓大食館" />
+    <input type = "hidden"  id="choice23" value="愛樂廚房" />
+  
+<!--東南-->
+
+    <input type = "hidden"  id="choice5" value="清真泰皇餐廳" />
+    <input type = "hidden"  id="choice6" value="泰品泰式雲南料理" />
+    <input type = "hidden"  id="choice7" value="母女的店" />
+    <input type = "hidden"  id="choice8" value="THAIHAND 右手餐廳" />
+    <input type = "hidden"  id="choice9" value="池先生 Kopitiam" />
+   
+<!--歐式-->
+
+    <input type = "hidden"  id="choice10" value="Ville Café" />
+    <input type = "hidden"  id="choice11" value="湛盧咖啡" />
+    <input type = "hidden"  id="choice12" value="Baffery 焙福複合式烘焙餐廳" />
+    <input type = "hidden"  id="choice13" value="貳樓餐廳 Second Floor Café" />
+    <input type = "hidden"  id="choice14" value="Mimi’s cafe米米珈琲" />
+
+  
+  <p id="playyy"><img id = "mygif" src = "https://i.imgur.com/9f5tFYV.png" alt = "lottery.gif"></p>
+  
+
+
+  <div class="container">
+   <div class="grid-12">
+    <button id="button" onClick="testResult()"; class = "button"></botton>
+   </div>
+  </div>
+
+<div style="clear:both;"></div>
+<div id="gotop">^</div>
+</body>
+</html>

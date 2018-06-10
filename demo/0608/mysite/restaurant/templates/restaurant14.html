@@ -1,0 +1,201 @@
+<!doctype html>
+<html>
+{% load staticfiles %}
+<style>
+#myCarousel{margin:0px;}
+/*圖片輪轉*/
+#container{
+    background-image: url('{% static 'restaurant/sidebar.gif' %}');
+    width:1366px;
+    height:768px;
+    margin:0px;
+}
+#sidebody{
+
+    width:1004px;
+    height:768px;
+    right:0px;
+    float:right;
+    position: absolute;
+    z-index: 1;
+}
+#sidebar{
+    padding:20px;
+    text-align: left;
+    width:350px;
+    height:768px;
+    float:left;
+}
+#login a{
+    position:absolute;top:15px;right:20px;z-index:5;
+    text-decoration: none;color: white;
+}
+#login a:hover{
+    position:absolute;top:15px;right:20px;z-index:5;
+    text-decoration: none;color: #f17666;
+}
+
+#info{
+    text-align: left;
+    color:white;
+    font-family: 微軟正黑體;
+    position:absolute;bottom:20px;left:20px;
+}
+#name{
+    font-family: 微軟正黑體;
+    color:white;font-size: 72px;
+    letter-spacing:15px;
+    position:absolute;top:120px;left:75px;
+}
+
+
+/*評分*/
+
+
+/*commemt*/
+#comment{
+  padding:20px;
+  text-align: left;
+    width:1004px;
+    height:768px;
+    right:0px;
+    z-index:10;
+    display:none;
+    background-image: url('{% static 'restaurant/comment.gif' %}');
+    position:absolute;
+}
+#closeComment{
+  background-color: rgba(247,207,186,0);
+  position:absolute;top:15px;right:20px;z-index:5;
+  color:rgb(232,155,122);font-size:20px;
+  border:none;
+}
+#closeComment:hover{
+  position:absolute;top:15px;right:20px;z-index:5;
+  color:white;
+}
+#stars:active{
+  display: block;position: absolute;
+}
+
+</style>
+<head>
+    <title>貳樓餐廳 Second Floor</title>
+    <!-- 抽獎系統 -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- 圖片輪轉 -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+        // DOM Ready
+        $(function(){
+            $('#slider').anythingSlider();
+        });
+    </script>
+  <script>
+function myFunction() {
+  document.getElementById("comment").style.display = 'block';
+}
+function myFunction2() {
+  document.getElementById("comment").style.display = 'none';
+}
+</script>
+</head>
+<body>
+
+<div id="container">
+<div id="sidebar">
+
+  <a href="../categorize" id="logo"><img onmouseover="this.src='{% static 'restaurant/logoHover.png' %}'" onmouseout="this.src='{% static 'restaurant/logo.png' %}'" src="{% static 'restaurant/logo.png' %}" border="0" height="72px"></a>
+  <!-- Trigger the modal with a button -->
+  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">抽籤系統</button>
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">晚餐吃什麼</h4>
+        </div>
+        <div class="modal-body">
+          <p>今天決定吃...</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <button onclick="myFunction()">Click me</button>
+  <!-- 地址 -->
+  {% for r in restaurants14 %}
+  <div id="name">
+  <p><span style='writing-mode:tb-rl;'>{{r.name}}</span></p>
+  </div>
+  <div id="info">
+  100<br><a href='{{r.googlecon}}'>{{r.address}}</a><hr>
+  {{r.tele}}
+  </div>
+  {% endfor %}
+
+
+  
+</div>
+<!-- 圖片輪轉 -->
+<div id="comment">
+  <a href="/comment" target="_self">我要留言</a>
+  <button onclick="myFunction2()" id="closeComment">X</button>
+  <div style="font-size:72px;color:rgb(232,155,122);padding-bottom:0px;border-bottom:1px solid rgb(232,155,122);">
+    4.0<span style="font-size:12px;">   已有0人參與評分</span>
+  </div>
+</div>
+<div id="sidebody">
+    <div id="login">
+        <a href="/login" target="_self">會員登入</a>
+    </div>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" >
+      <div class="item active" style="margin:0px;">
+        <img src="{% static 'restaurant/pictures/euro/32_1.jpg' %}" alt="" style="height:760px;" align="right">
+      </div>
+
+      <div class="item" style="margin:0px;">
+        <img src="{% static 'restaurant/pictures/euro/32_2.jpg' %}" alt="" style="height:760px;" align="right">
+      </div>
+    
+      <div class="item" style="margin:0px;">
+        <img src="{% static 'restaurant/pictures/euro/32_3.jpg' %}"" alt="" style="height:760px;" align="right">
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+  </div>
+</div>
+</body>
+</html>

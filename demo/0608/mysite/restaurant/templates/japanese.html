@@ -1,0 +1,103 @@
+<html>
+<head>
+{% load staticfiles %}
+<title>分類</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+<style>
+*{font-family:Microsoft JhengHei;}
+#sidebar a:link {text-decoration: none;color: white;}
+#sidebar a:hover, a:active{text-decoration: none;color: #f17666;}
+#container{
+    width:1366px;
+    height:768px;
+    margin:0px;
+}
+#headbox{
+    background:url("/static/restaurant/categorize/headbox.gif");
+	position:fixed;
+    width:1366px;
+    height:95px;
+    margin:0px;
+}
+#content{
+    background:url("/static/restaurant/categorize/Background.gif");
+    position:fixed;
+    width:1366px;
+    height:673px;
+    margin-top:95px;
+}
+#sidebar{
+    display: inline-block;
+    border-radius: 25px;
+	position:fixed;
+	background:url("/static/restaurant/categorize/sidebar.gif");
+	text-align: center;
+    width:181px;
+    height:281px;
+    padding:0px;
+    margin-top:100px;
+    margin-left:106px;
+    margin-right:0px;
+    float:left;
+}
+#sidebodyup{
+    width:1010px;
+    height:50px;
+    margin-top:0px;
+    margin-left:0px;
+    margin-right:26px;
+    margin-bottom:5px;
+    float:right;
+}
+#sidebody{
+    background-image: url('{% static 'restaurant/categorize/sidebody.gif' %}');
+    border-radius: 25px;
+    width:1010px;
+    height:500px;
+    padding:10px;
+    margin-top:50px;
+    margin-left:0px;
+    margin-right:26px;
+    margin-bottom:5px;
+    float:right;
+    overflow:auto;
+}
+#clear{
+    clear:both;
+}
+
+</style>
+<div id="container">
+    <div id="headbox">
+        <a href="../homepage" id="logo"><img onmouseover="this.src='{% static 'restaurant/logoHover.png' %}'"onmouseout="this.src='{% static 'restaurant/logo.png' %}'" src='{% static 'restaurant/logo.png' %}'" border="0" height="72px" style="margin:15px;"></a>
+        <a href="../lottery" id="logo"><img onmouseover="this.src='{% static 'restaurant/chain.png' %}'" onmouseout="this.src='{% static 'restaurant/chain2.png' %}'" src='{% static 'restaurant/chain2.png' %}'" border="0" height="72px" style="margin:15px;"></a>
+    </div>
+    <div id="content">
+    <div id="sidebar">
+    	<p style="color:white;">餐廳類別</p>
+        <hr style="width:70%;height:0.1px;border-bottom:none;" color="white">
+    	<a href="/restaurant/chinese" target="_self">中式</a><br>
+    	<a href="/restaurant/japanese" target="_self">日式</a><br>
+    	<a href="/restaurant/korean" target="_self">韓式</a><br>
+    	<a href="/restaurant/southeast" target="_self">東南</a><br>
+    	<a href="/restaurant/euro" target="_self">歐式</a><br>
+    	<a href="/restaurant/american" target="_self">美式</a>
+    </div>
+    <div id="sidebodyup">
+        <p style="color:white;font-size:36px;">日式</p>  
+    </div>
+    <div id="sidebody">
+        <a href="../restaurant16" id="logo"><img onmouseover="this.src='{% static 'restaurant/restaurant/16_1_1.jpg' %}'" onmouseout="this.src='{% static 'restaurant/restaurant/16_1_2.jpg' %}'" src="{% static 'restaurant/restaurant/16_1_2.jpg' %}" border="0" style="margin-left:10px;margin-top:10px;"></a>
+        <a href="../restaurant17" id="logo"><img onmouseover="this.src='{% static 'restaurant/restaurant/22_1_1.jpg' %}'" onmouseout="this.src='{% static 'restaurant/restaurant/22_1_2.jpg' %}'" src="{% static 'restaurant/restaurant/22_1_2.jpg' %}" border="0" style="margin-left:10px;margin-top:10px;"></a>
+        <a href="../restaurant18" id="logo"><img onmouseover="this.src='{% static 'restaurant/restaurant/29_1_1.jpg' %}'" onmouseout="this.src='{% static 'restaurant/restaurant/29_1_2.jpg' %}'" src="{% static 'restaurant/restaurant/29_1_2.jpg' %}" border="0" style="margin-left:10px;margin-top:10px;"></a>
+        <a href="../restaurant19" id="logo"><img onmouseover="this.src='{% static 'restaurant/restaurant/33_1_1.jpg' %}'" onmouseout="this.src='{% static 'restaurant/restaurant/33_1_2.jpg' %}'" src="{% static 'restaurant/restaurant/33_1_2.jpg' %}" border="0" style="margin-left:10px;margin-top:10px;"></a>
+        <a href="../restaurant20" id="logo"><img onmouseover="this.src='{% static 'restaurant/restaurant/51_1_1.jpg' %}'" onmouseout="this.src='{% static 'restaurant/restaurant/51_1_2.jpg' %}'" src="{% static 'restaurant/restaurant/51_1_2.jpg' %}" border="0" style="margin-left:10px;margin-top:10px;"></a>
+
+
+    </div>
+    </div>
+</div>
+</body>
+</html>
